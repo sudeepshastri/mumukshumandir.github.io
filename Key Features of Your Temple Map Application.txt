@@ -1,0 +1,43 @@
+Key Features of Your Temple Map Application
+1. Core Map Functionality & Interaction
+Interactive Map Base: The application is built using Leaflet.js, a lightweight, open-source JavaScript library for interactive maps.
+Multiple Map Views (Layers): You can switch between different map styles for the best viewing experience. The control for this is enlarged and located in the bottom-right corner.
+Street View: A standard road map (from OpenStreetMap).
+Satellite View: High-resolution satellite imagery (from Esri).
+Dark Mode: A stylish, low-light map great for focusing on the data points (from Carto).
+Clickable Markers: Each temple is represented by a pin on the map. Clicking a pin opens the detailed information popup for that location.
+Informative Tooltips: When you hover your mouse over a marker, a small tooltip appears showing the Temple Name and City for quick identification.
+Intelligent Zooming (fitBounds): Whenever you apply a filter, the map automatically zooms and pans to perfectly frame all the selected markers.
+
+
+2. Data Handling and Display
+Internal Data Source: The application's data is hardcoded directly into the HTML file as a JavaScript array (const templeData). This eliminates the need for external CSV files and makes the application a single, self-contained file.
+Detailed Information Table: When you click a marker, a table on the left side of the popup displays all available details for that temple, such as address, contact info, timings, and importance.
+Dynamic Location Counter: A summary box on the top-left of the map always shows a live count of how many locations are currently visible based on your filters ("📍 Showing: X").
+
+
+3. Filtering and Searching
+Hierarchical Filters: On the top-left, there are three dropdown menus that work together to let you drill down to specific locations:
+Country: Select a country to begin.
+State: This dropdown automatically populates with only the states available in the selected country.
+City: This dropdown populates with only the cities available in the selected state.
+Global Search Dropdown: A large search bar in the top-right corner allows you to instantly find and jump to any temple by its name from the complete list, regardless of the current filters. The list is alphabetized for easy searching.
+
+
+4. User Interface and Experience (UI/UX)
+Fullscreen Mode: A dedicated button (🔲) in the top-right allows you to view the map in an immersive, fullscreen mode.
+Home/Reset Button: A dedicated home button (🏠) in the top-right instantly clears all active filters (Country, State, City, and Search) and resets the map to its original, zoomed-out view of all locations.
+Enlarged & Grouped Controls: The primary action buttons (Search, Home, Fullscreen) are grouped in a container in the top-right and have an increased size for better visibility and ease of use.
+Responsive Foundation: The map itself is built on Leaflet, which is mobile-friendly and responds well to different screen sizes.
+
+
+5. Detail View & Image Gallery
+Modal Popup Window: Clicking a marker opens a full-screen overlay (a modal) that presents detailed information without leaving the map page. It is split into two sections: details on the left, images on the right.
+Automatic Image Slideshow:
+If a temple has more than one image, the gallery automatically begins a slideshow, cycling to the next image every 2 seconds.
+The slideshow runs in a continuous loop.
+
+Manual Slideshow Control:
+Next (⟶) and Previous (⟵) buttons are always available to navigate the images manually.
+As soon as you click either button, the automatic slideshow stops, giving you full control.
+Graceful Image Handling: The application looks for images based on a standard naming convention (e.g., images/Temple Name/img1.jpg, img2.png, etc.). If an image file is missing, it is simply skipped without showing a broken image icon, ensuring a clean user experience
